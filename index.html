@@ -37,7 +37,7 @@
 			<div id="wrap">
 				
 				<div id="img-div">
-					<img id="img" class="animation" src="img/WechatIMG2.jpeg"/>
+					<img id="img" src="img/WechatIMG2.jpeg"/>
 				</div>
 				<div id="clock-box">
 					<span class="STYLE1"></span>
@@ -213,7 +213,9 @@
 					$("#img-div").show();
 
 					while(true) {
+						$("#img").removeClass("animation");
 						$("#img").attr("src", img_src[img_index]);
+						$("#img").addClass("animation");
 						img_index += 1;
 						if(img_index == img_src.length) {
 							img_index = 0;

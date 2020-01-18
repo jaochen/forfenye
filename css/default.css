@@ -30,4 +30,9 @@ a {color:#000;font-size:14px;}
 .space{margin-right:150px;}
 #img-div{display: none;position: absolute;left:60px;top:140px;}
 #img{width:400px;}
-.animation{animation-name: fadeInOut;animation-duration: 6s;animation-iteration-count: infinite;animation-timing-function: linear;}
+.animation{
+    animation-name: fadeInOut;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
