@@ -163,25 +163,25 @@
             ctx.scale(scale, scale);
             ctx.moveTo(0, 0);
     	    ctx.lineTo(15, 15);
-    	    ctx.lineTo(60, 15);
+    	    ctx.lineTo(90, 15);
             ctx.stroke();
 
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
             ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("我们的故事", 23, 10);
+            ctx.fillText("我们的故事开始了", 23, 10);
             ctx.restore();
         },
         clear: function() {
             var ctx = this.tree.ctx, cirle = this.cirle;
-            var point = cirle.point, scale = cirle.scale, radius = 26;
+            var point = cirle.point, scale = cirle.scale, radius = 36;
             var w = h = (radius * scale);
             ctx.clearRect(point.x - w, point.y - h, 4 * w, 4 * h);
         },
         hover: function(x, y) {
             var ctx = this.tree.ctx;
             var pixel = ctx.getImageData(x, y, 1, 1);
-            return pixel.data[3] == 255
+            return pixel.data[3] == 255     // 设置透明
         }
     }
 
