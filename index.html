@@ -36,9 +36,9 @@
 			</div>
 			<div id="wrap">
 				
-				<div id="img-div">
+				<!-- <div id="img-div">
 					<img id="img" src="img/WechatIMG2.jpeg"/>
-				</div>
+				</div> -->
 				<div id="clock-box">
 					<span class="STYLE1"></span>
 					<font color="#33CC00">亲爱的小天才，我们在一起</font>
@@ -68,13 +68,13 @@
 				}
 				
 
-				var img_src = [
-					"img/WechatIMG2.jpeg",
-					"img/WechatIMG3.jpeg",
-					"img/WechatIMG4.jpeg",
-					"img/WechatIMG5.jpeg"
-				];
-				var img_index = 0;
+				// var img_src = [
+				// 	"img/WechatIMG2.jpeg",
+				// 	"img/WechatIMG3.jpeg",
+				// 	"img/WechatIMG4.jpeg",
+				// 	"img/WechatIMG5.jpeg"
+				// ];
+				// var img_index = 0;
 
 				var width = canvas.width();
 				var height = canvas.height();        
@@ -209,20 +209,20 @@
 					}
 				}));
 				
-				var imgChange = eval(Jscex.compile("async", function() {
-					$("#img-div").show();
+				// var imgChange = eval(Jscex.compile("async", function() {
+				// 	$("#img-div").show();
 
-					while(true) {
-						$("#img").removeClass("animation");
-						$("#img").attr("src", img_src[img_index]);
-						$("#img").addClass("animation");
-						img_index += 1;
-						if(img_index == img_src.length) {
-							img_index = 0;
-						}
-						$await(Jscex.Async.sleep(6000));
-					}
-				}));
+				// 	while(true) {
+				// 		$("#img").removeClass("animation");
+				// 		$("#img").attr("src", img_src[img_index]);
+				// 		$("#img").addClass("animation");
+				// 		img_index += 1;
+				// 		if(img_index == img_src.length) {
+				// 			img_index = 0;
+				// 		}
+				// 		$await(Jscex.Async.sleep(6000));
+				// 	}
+				// }));
 
 				var runAsync = eval(Jscex.compile("async", function () {
 					$await(seedAnimate());
@@ -231,7 +231,7 @@
 					$await(moveAnimate());
 		
 					textAnimate().start();
-					imgChange().start();
+					// imgChange().start();
 		
 					$await(jumpAnimate());
 				}));
